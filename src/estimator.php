@@ -27,5 +27,5 @@ function covid19ImpactEstimator($data)
         'dollarsInFlight' => (int) (((($data['reportedCases'] * 50) * 512) * 0.65 * 1.5) / 30)
     ];
 
-    return $estimatorData;
+    return json_encode($estimatorData);
 }
