@@ -8,6 +8,7 @@ function covid19ImpactEstimator($data)
 
     $estimatorData = [];
     $estimatorData['data'] = $data;
+    $estimatorData['data']['days'] = 'days';
     $estimatorData['impact'] = [
         'currentlyInfected' => (int)$data['reportedCases'] * 10,
         'infectionsByRequestedTime' => (int) (($data['reportedCases'] * 10) * 512),
